@@ -1,4 +1,4 @@
-# Example my first plugin for Nvim and Lazy
+# Ex do meu primeiro plugin para Nvim e Lazy
 
 https://github.com/segodimor2d2/explugin-nvim
 
@@ -6,24 +6,31 @@ https://github.com/segodimor2d2/explugin-nvim
 
 "segodimor2d2/explugin-nvim"
 
-### Adicione um arquivo .lua em .config/nvim/lua/plugins/qualquerNome.lua qualquer 
+### Crie um arquivo .lua em .config/nvim/lua/plugins/qualquerNome.lua qualquer 
 
-leader-l para executar Lazy
+#### -- Adicione o seguinte código para instalar via Lazy
 
-leader-i para instalar o plugin
 
-return {
 ```lua
+return {
   "segodimor2d2/explugin-nvim",
   config = true,
 }
 ```
 
+para executar Lazy:
+
+leader-l
+
+para instalar o plugin:
+
+leader-i
+
 ### Rodando o plugin:
 
 :lua require("qualquerNome").test()
 
-ou use o keymap
+ou pode usar o keymap:
 
 leader-pk
 
@@ -31,10 +38,14 @@ o resultado vai ser "test my first plugin !!" uma Notification que vai aparecer 
 
 :Notification
 
+se tiver erros vc pode ver eles com:
 
-### Detalhes do codigo:
+:messages
 
-Eu fiz uma estrutura bem simples assim e a pasta pode ficar em qualquer path que vc preferir:
+
+### Detalhes do código para desenvolver:
+
+Eu fiz uma estrutura bem simples assim (a pasta pode ficar em qualquer path que vc preferir):
 
 ```lua
 explugin-nvim
@@ -60,6 +71,6 @@ M.setup = function()
 end
 
 return M
-}
+
 ```
 
