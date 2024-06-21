@@ -11,12 +11,12 @@ https://github.com/segodimor2d2/explugin-nvim
 leader-l para executar Lazy
 leader-i para instalar o plugin
 
-'''
 return {
+```lua
   "segodimor2d2/explugin-nvim",
   config = true,
 }
-'''
+```
 
 ### rodando o plugin:
 
@@ -31,14 +31,16 @@ leader-pk
 
 Eu fiz uma estrutura bem simples assim:
 
+```lua
 ├── lua
 │   └── explugin-nvim
 │       └── init.lua
 └── README.md
+```
 
 o código do init.lua é o seguinte:
 
-'''
+```lua
 local M = {}
 
 M.fntest = function()
@@ -52,6 +54,6 @@ M.setup = function()
 end
 
 return M
-
-'''
+}
+```
 
