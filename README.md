@@ -34,9 +34,10 @@ o resultado vai ser "test my first plugin !!" uma Notification que vai aparecer 
 
 ### Detalhes do codigo:
 
-Eu fiz uma estrutura bem simples assim:
+Eu fiz uma estrutura bem simples assim e a pasta pode ficar em qualquer path que vc preferir:
 
 ```lua
+explugin-nvim
 ├── lua
 │   └── explugin-nvim
 │       └── init.lua
