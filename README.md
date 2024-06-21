@@ -9,6 +9,7 @@ https://github.com/segodimor2d2/explugin-nvim
 ### Adicione um arquivo .lua em .config/nvim/lua/plugins/qualquerNome.lua qualquer 
 
 leader-l para executar Lazy
+
 leader-i para instalar o plugin
 
 return {
@@ -18,7 +19,7 @@ return {
 }
 ```
 
-### rodando o plugin:
+### Rodando o plugin:
 
 :lua require("qualquerNome").test()
 
@@ -26,8 +27,12 @@ ou use o keymap
 
 leader-pk
 
+o resultado vai ser "test my first plugin !!" uma Notification que vai aparecer na tela como um popup ou pode ver executando:
 
-### detalhes do codigo:
+:Notification
+
+
+### Detalhes do codigo:
 
 Eu fiz uma estrutura bem simples assim:
 
