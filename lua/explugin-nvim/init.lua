@@ -4,7 +4,7 @@ M.fntest = function()
   -- print("test my first plugin !!!")
   local getBuffer = vim.api.nvim_get_current_buf()
 
-	vim.api.nvim_buf_set_lines(getBuffer , 1, 5, false,
+	vim.api.nvim_buf_set_lines(getBuffer , 8, 9, false,
     { "aqui um novo texto"}) -- incerir na ultima linha
 end
 
