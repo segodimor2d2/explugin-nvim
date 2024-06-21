@@ -61,7 +61,7 @@ o código do init.lua é o seguinte:
 local M = {}
 
 M.fntest = function()
-	print("test my first plugin !!")
+	print("meu primeiro plugin !!")
 end
 
 M.setup = function()
