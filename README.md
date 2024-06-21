@@ -10,6 +10,12 @@ https://github.com/segodimor2d2/explugin-nvim
 
 #### -- Adicione o seguinte código para instalar via Lazy
 
+linha1
+linha2
+linha3
+linha4
+linha5
+
 
 ```lua
 return {
