@@ -21,10 +21,32 @@ M.fntest = function()
 	end
 
 	-- Concatenate lines into a single string separated by '|'
-	local result = table.concat(lines, ",")
+	-- local result = table.concat(lines, ",")
 	-- print(result)
+	--
 
-	vim.api.nvim_buf_set_lines(getBuffer, (lini - 1), lfin, false, { result }) -- incerir na ultima linha
+	local outTxt = "\n"
+	outTxt = outTxt .. "Olá "
+	outTxt = outTxt .. lines[1]
+	outTxt = outTxt .. ", tudo bem?\n\n"
+	outTxt = outTxt .. "Eu sou desenvolvedor FullStack com experiência "
+	outTxt = outTxt .. lines[2]
+	outTxt = outTxt .. "; e tenho interesse na vaga de "
+	outTxt = outTxt .. lines[3]
+	outTxt = outTxt .. "." .. "\n\neu gostaria de saber mais detalhes ^^!."
+	outTxt = outTxt .. "\n\n"
+	outTxt = outTxt .. "Atte. Sebastian"
+
+	-- Divide a string outTxt em linhas
+	-- local outLines = {}
+	-- for line in outTxt:gmatch("[\r\n]+") do
+	-- 	table.insert(outLines, line)
+	-- end
+
+	local outLines = vim.split(outTxt, "\n", true)
+
+	-- Inserir as linhas no buffer
+	vim.api.nvim_buf_set_lines(getBuffer, lfin, lfin, false, outLines)
 end
 
 M.setup = function()

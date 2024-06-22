@@ -10,13 +10,7 @@ https://github.com/segodimor2d2/explugin-nvim
 
 #### -- Adicione o seguinte código para instalar via Lazy
 
-linha1
-linha2
-linha3
-linha4
-linha5
-
-
+---
 ```lua
 return {
   "segodimor2d2/explugin-nvim",
@@ -77,6 +71,24 @@ M.setup = function()
 end
 
 return M
-
 ```
+---
 
+
+Rosivan
+em desenvolvimento de micro serviços e APIs
+Desenvolvedor de Sistemas Pleno
+
+
+``` lua
+outTxt = "Olá "
+outTxt += listTxt[0]
+outTxt += ", tudo bem?\n\n"
+outTxt += "Eu sou desenvolvedor FullStack, tenho experiência "
+outTxt += listTxt[1]
+outTxt += "; e tenho interesse na vaga de "
+outTxt += listTxt[2]
+outTxt += "."
+outTxt += "\n\neu gostaria de saber mais detalhes ^^!."
+outTxt += "\n\nAtte. Sebastian"
+```
