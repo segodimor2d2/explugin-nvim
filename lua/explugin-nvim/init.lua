@@ -19,27 +19,30 @@ M.fntest = function()
 		lines = vim.api.nvim_buf_get_lines(0, lini - 1, lfin, true)
 	end
 
-	local outTxt = "\n"
-	outTxt = outTxt .. "Olá "
-	outTxt = outTxt .. lines[1]
-	outTxt = outTxt .. ", tudo bem?\n\n"
-	outTxt = outTxt .. "Eu sou desenvolvedor FullStack com experiência "
-	outTxt = outTxt .. lines[2]
-	outTxt = outTxt .. "; e tenho interesse na vaga de "
-	outTxt = outTxt .. lines[3]
-	outTxt = outTxt .. "." .. "\n\neu gostaria de saber mais detalhes ^^!."
-	outTxt = outTxt .. "\n\n"
-	outTxt = outTxt .. "Atte. Sebastian"
+  local outlines = {}
+  table.insert(outlines, "")
+  table.insert(outlines, "olá " .. lines[1] .. ", tudo bem?")
+  table.insert(outlines, "")
+  table.insert(outlines, "")
+  table.insert(outlines,
+    "Eu sou desenvolvedor full stack com experiência "
+    .. lines[2]
+    .. "; e tenho interesse na vaga de "
+    .. lines[3])
+  table.insert(outlines, "")
+  table.insert(outlines, "")
+  table.insert(outlines, "eu gostaria de saber mais detslhes!.")
+  table.insert(outlines, "")
+  table.insert(outlines, "")
+  table.insert(outlines, "Atte. Sebastian")
 
-	local outLines = vim.split(outTxt, "\n", true)
-
-	vim.api.nvim_buf_set_lines(getBuffer, lfin, lfin, false, outLines)
+	vim.api.nvim_buf_set_lines(getBuffer, lfin, lfin, false, outlines)
 end
 
 M.setup = function()
 	vim.keymap.set("v", "<leader>pk", function()
 		M.fntest()
-	end, { desc = "EX-Plugin-Nvim" })
+	end, { desc = "EXPluginNvim" })
 end
 
 return M
